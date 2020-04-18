@@ -1,15 +1,16 @@
 {
-  "name": "react-webpack-typescript",
+  "name": "react-e2e-unit-tests-template",
   "version": "1.0.0",
-  "description": "template of new react project",
+  "description": "template of new react project with tests",
   "scripts": {
     "dev": "webpack-dev-server --open --config ./webpack.dev.server.config.js",
     "build": "webpack --config ./webpack.prod.config.js",
     "bundleanalyze": "webpack --config ./webpack.bundleanalyze.js",
-    "lint": "tsc --noEmit && eslint '*/**/*.{js,ts,tsx}'",
-    "lint:fix": "eslint '*/**/*.{js,ts,tsx}' --quiet --fix",
+    "lint": "tsc --noEmit && eslint 'src/**/*.{js,ts,tsx}'",
+    "lint:fix": "eslint 'src/**/*.{js,ts,tsx}' --quiet --fix",
     "test:unit": "jest",
-    "test:e2e": "npm run build && cd e2e && npm run test"
+    "test:e2e": "npm run build && cd e2e && npm run test",
+    "postinstall": "cd e2e && npm i"
   },
   "keywords": [
     "react",
@@ -17,7 +18,10 @@
     "webpack",
     "babel",
     "eslint",
-    "prettier"
+    "prettier",
+    "jest",
+    "puppeteer",
+    "travis.ci"
   ],
   "author": "zaporozhetsanton@gmail.com",
   "license": "ISC",
