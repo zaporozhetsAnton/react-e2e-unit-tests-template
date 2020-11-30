@@ -21,7 +21,13 @@
       "DOM.Iterable",
       "ESNext",
       "ScriptHost"
-    ]
+    ],
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "./*"
+      ]
+    }
   },
   "include": [
     "./src/**/*"
