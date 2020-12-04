@@ -1,10 +1,10 @@
 module.exports = {
+    browserContext: 'incognito',
     launch: {
-        headless: true,
-        args: ['--disable-web-security', '--no-sandbox'],
-        // uncomment these line if you want to see tests execution
-        // headless: false,
-        slowMo: 10,
+        defaultViewport: null,
+        args: ['--no-sandbox', '--disable-setuid-sandbox', '--start-maximized'],
+        headless: true, // change to false if you want to see tests execution
+        slowMo: 25,
         // if you want to check network uncomment this line and use await jestPuppeteer.debug(); in your test
         // devtools: true,
     },
