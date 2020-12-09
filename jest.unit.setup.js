@@ -3,12 +3,16 @@
 // node module example
 // jest.mock(
 //     'redux',
-//     jest.fn(() => ({
-//         applyMiddleware: jest.fn(),
-//         createStore: jest.fn(),
-//         compose: jest.fn(),
-//         combineReducers: jest.fn(),
-//     })),
+//     jest.fn(() => {
+//         const moduleMock = jest.requireActual('redux');
+//         return {
+//             ...moduleMock,
+//             applyMiddleware: jest.fn(),
+//             createStore: jest.fn(),
+//             compose: jest.fn(),
+//             combineReducers: jest.fn(),
+//         };
+//     }),
 // );
 
 // local function mock example
