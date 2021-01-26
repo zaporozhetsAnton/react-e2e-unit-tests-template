@@ -1,5 +1,5 @@
 module.exports = {
     preset: 'jest-puppeteer',
     setupFilesAfterEnv: ['<rootDir>/e2e/config/setupTests.js'],
-    testPathIgnorePatterns: ['<rootDir>/__tests__'],
+    testMatch: ['<rootDir>/e2e/**/*.test.ts'],
 };
