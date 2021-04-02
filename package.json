@@ -10,7 +10,7 @@
     "lint:fix": "eslint 'src/**/*.{js,ts,tsx}' --quiet --fix",
     "test:unit": "jest -c jest.unit.config.js",
     "test:e2e": "npm run build && jest -c ./jest.e2e.config.js -w=2",
-    "test:e2e:ci": "npm run build && COMMAND='jest -c ./jest.e2e.config.js -w=2' node e2e/config/ciPuppeteerTestsRun.js"
+    "test:e2e:ci": "npm run build && COMMAND='jest -c ./jest.e2e.config.js -w=1' node e2e/config/ciPuppeteerTestsRun.js"
   },
   "keywords": [
     "react",
